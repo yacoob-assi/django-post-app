@@ -8,14 +8,19 @@
 </head>
 
 <body>
+
     {% extends "base.html"%}
+
     {% block content%}
+    <a href="{% url 'post_new' %}">Add new Post</a>
     <ul>
         {% for post in object_list %}
         <li><a href="{%url 'post_detail' post.pk%}">{{ post.title }}</a></li>
+
         <p>{{post.body}}</p>
         {% endfor %}
     </ul>
+
     {% endblock content %}
 
 </body>

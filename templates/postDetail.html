@@ -9,13 +9,16 @@
 
 <body>
 
-    {% extends 'base.html'%}
+    {% extends "base.html" %}
 
-    {% block content%}
+    {% block content %}
     <div class="post-entry">
         <h2>{{ object.title }}</h2>
         <p>{{ object.body }}</p>
     </div>
+    <a href="{%url 'post_update' post.pk%}">Edit the post</a>
+    <br>
+    <a href="{% url 'delete_post' post.pk%}">Delete the post</a>
     {% endblock content%}
 </body>
 
