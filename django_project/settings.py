@@ -20,21 +20,14 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/4.0/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-<<<<<<< HEAD
+
 SECRET_KEY = "django-insecure-wzgvs+zs(5v6k8jv@g(%tb-xqv++bwz@04^9+ts1&3zyni_3h!"
-=======
-SECRET_KEY = "django-insecure-+e&6k@_6rpeqg@0#vma(==#q^+(&r-v*nnr1fj^m(ou$hz9u4$"
->>>>>>> d20cf317daa13f400eb5b7893aca5712eb76199e
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-<<<<<<< HEAD
-ALLOWED_HOSTS = []
-=======
-ALLOWED_HOSTS = ["*"]
->>>>>>> d20cf317daa13f400eb5b7893aca5712eb76199e
 
+ALLOWED_HOSTS = []
 
 # Application definition
 
@@ -45,11 +38,8 @@ INSTALLED_APPS = [
     "django.contrib.sessions",
     "django.contrib.messages",
     "django.contrib.staticfiles",
-<<<<<<< HEAD
     "posts.apps.PostsConfig",
-=======
-    "pages.apps.PagesConfig",
->>>>>>> d20cf317daa13f400eb5b7893aca5712eb76199e
+    "accounts.apps.AccountsConfig",
 ]
 
 MIDDLEWARE = [
@@ -67,11 +57,7 @@ ROOT_URLCONF = "django_project.urls"
 TEMPLATES = [
     {
         "BACKEND": "django.template.backends.django.DjangoTemplates",
-<<<<<<< HEAD
         "DIRS": [BASE_DIR / "templates"],
-=======
-        "DIRS": [],
->>>>>>> d20cf317daa13f400eb5b7893aca5712eb76199e
         "APP_DIRS": True,
         "OPTIONS": {
             "context_processors": [
@@ -81,10 +67,6 @@ TEMPLATES = [
                 "django.contrib.messages.context_processors.messages",
             ],
         },
-<<<<<<< HEAD
-=======
-        "DIRS": [BASE_DIR / "templates"],
->>>>>>> d20cf317daa13f400eb5b7893aca5712eb76199e
     },
 ]
 
@@ -136,14 +118,13 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.0/howto/static-files/
 
-<<<<<<< HEAD
+
 STATIC_URL = "/static/"
 STATICFILES_DIRS = [BASE_DIR / "static"]  # new
-=======
-STATIC_URL = "static/"
->>>>>>> d20cf317daa13f400eb5b7893aca5712eb76199e
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.0/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
+LOGIN_REDIRECT_URL = "home"
+LOGOUT_REDIRECT_URL = "home"  # new
